@@ -21,7 +21,7 @@ namespace Tamagotchi
             {
                 Alive = spelare.GetAlive();
                 spelare.Tick();
-                Console.WriteLine("What do you want to do? \n Feed \n Talk \n Teach \n Stats");
+                Console.WriteLine("What do you want to do? \n[1]Feed\n[2]Talk\n[3]Teach\n[4]Stats\n[5]Skip");
                 svar = Console.ReadLine().ToLower();
 
                 if (svar == "feed")
@@ -56,6 +56,8 @@ namespace Tamagotchi
                 {
                     spelare.PrintStats();
                 }
+                else if (svar == "skip")
+                {}
                 else
                 {
                     Console.WriteLine("Write one of the alternatives)");
